@@ -12,7 +12,9 @@
 ## Description
 This Note Taker application is designed to practice the basic CRUD operations in software development. By connecting this front end application to a back end written in Express.js, this application can create new notes, read existing notes, update existing notes and finally, delete existing notes.  
 ## Installation
-There is no installation for this application as it is hosted live at the link below. 
+There is no installation for this application as it is hosted live at the link below.
+
+https://note-taker-remindme-1dc60909ba4b.herokuapp.com/
 ## Usage
 To use this application, visit the link to the deployed application included in the description section. Once there, you can view existing notes saved in the application, delete saved notes, add your own notes and watch the application update with each change. To add a new note, simply click the plus sign on the top right corner, then type your title and test and click save. You will see your new note appear in the saved notes column on the left hand side. To delete a saved note, click the trash can button located next to the title of your saved note in the saved notes column. 
 #### Example of command line prompts for this application.

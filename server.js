@@ -12,10 +12,11 @@ const app = express();
 // Middleware
 app.use(express.json());  
 app.use(express.urlencoded({ extended: true })); 
+app.use(express.static("public"));  
 app.use("/", deleteRouter);
 app.use("/", notesRouter);
 app.use("/api", api);
-app.use(express.static("public"));  
+//app.use(express.static("public"));  
 
 // Routes that serve static files
 app.get("/notes", (req, res) => {

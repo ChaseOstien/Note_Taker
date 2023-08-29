@@ -5,7 +5,7 @@ const jsonData = require("./db/db.json"); // This line imports the data base fil
 const api = require("./routes/index");
 const deleteRouter = require("./routes/delete");
 const notesRouter = require("./routes/notes");
-const PORT = 3001; // This line assigns the server port we want to work with. 
+const PORT = process.env.PORT || 3001; // This line assigns the server port we want to work with. 
 
 const app = express();  
 
@@ -32,6 +32,6 @@ app.get("*", (req, res) => {
 
 // Sets our server port
 app.listen(PORT, () => 
-    console.log(`App listneing at http://localhost:${PORT}`)
+    console.log(`App listneing at ${PORT}`)
 );
 

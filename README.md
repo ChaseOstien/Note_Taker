@@ -16,7 +16,7 @@ There is no installation for this application as it is hosted live at the link b
 ## Usage
 To use this application, visit the link to the deployed application included in the description section. Once there, you can view existing notes saved in the application, delete saved notes, add your own notes and watch the application update with each change. To add a new note, simply click the plus sign on the top right corner, then type your title and test and click save. You will see your new note appear in the saved notes column on the left hand side. To delete a saved note, click the trash can button located next to the title of your saved note in the saved notes column. 
 #### Example of command line prompts for this application.
-![Screenshot of command line prompts.](./Develop/public/assets/img/Screenshot11.png)
+![Screenshot of command line prompts.](./public/assets/img/Screenshot11.png)
 ## License
 MIT License
 

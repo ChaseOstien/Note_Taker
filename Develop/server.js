@@ -2,8 +2,9 @@ const express = require("express"); //This line imports express into this projec
 const path = require("path"); // This line imports the path module into this file. This allows you to work with directories and file paths.
 const fs = require('fs'); // This imports the file system module from node, allowing you to manipulate files, indluding reading and writing. 
 const jsonData = require("./db/db.json"); // This line imports the data base file in this directory. 
-const api = require("./routes/index"); // This line imports the index.js api route
-const deleteRouter = require("./routes/delete"); // Imports the delete router. 
+const api = require("./routes/index");
+const deleteRouter = require("./routes/delete");
+const notesRouter = require("./routes/notes");
 const PORT = 3001; // This line assigns the server port we want to work with. 
 
 const app = express();  
@@ -12,6 +13,7 @@ const app = express();
 app.use(express.json());  
 app.use(express.urlencoded({ extended: true })); 
 app.use("/", deleteRouter);
+app.use("/", notesRouter);
 app.use("/api", api);
 app.use(express.static("public"));  
 

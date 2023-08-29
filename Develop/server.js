@@ -7,16 +7,17 @@ const deleteRouter = require("./routes/delete");
 const notesRouter = require("./routes/notes");
 const PORT = 3001; // This line assigns the server port we want to work with. 
 
-const app = express(); // This line creates a new instance of an express application in this project.  
+const app = express();  
 
-
-app.use(express.json()); // app refers to the instance of express that we created, .use() is used to set up middleware functions that will be executed on incoming HTTP requests. express.json() is a built in middleware function provided by express that is used to parse JSON data in incoming requests. It configures express to automatically parse JSON data in the request body. It will make it available as a JavaScript object on the request object. It will take data sent in a post request body, parse it and make it available at req.body. 
-app.use(express.urlencoded({ extended: true })); // This middleware is used to parse data from URL-encoded forms in incoming requests. Extended true allows you to parse complex objects. 
+// Middleware
+app.use(express.json());  
+app.use(express.urlencoded({ extended: true })); 
 app.use("/", deleteRouter);
 app.use("/", notesRouter);
 app.use("/api", api);
-app.use(express.static("public")); // This middleware is set up to serve static files when you access the public directory. This allows you to serve HTML, CSS and JS files such as those in the 2 send file get requests below. 
+app.use(express.static("public"));  
 
+// Routes that serve static files
 app.get("/notes", (req, res) => {
     res.sendFile(path.join(__dirname, "/public/notes.html"));
 
@@ -29,6 +30,7 @@ app.get("*", (req, res) => {
     console.log(`${req.method} recieved to get start page`);
 });
 
+// Sets our server port
 app.listen(PORT, () => 
     console.log(`App listneing at http://localhost:${PORT}`)
 );
